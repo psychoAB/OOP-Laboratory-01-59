@@ -10,11 +10,11 @@ public class Crab extends Actor
     {
         if(Greenfoot.isKeyDown("up"))
         {
-            turn(10);
+            turn(5);
         }
         else if(Greenfoot.isKeyDown("down"))
         {
-            turn(-10);
+            turn(-5);
         }
         else if(Greenfoot.isKeyDown("right"))
         {
@@ -23,6 +23,15 @@ public class Crab extends Actor
         else if(Greenfoot.isKeyDown("left"))
         {
             move(-10);
+        }
+        
+        Actor worm;
+        worm = getOneObjectAtOffset(0,0,Worm.class);
+        if(worm != null)
+        {
+            World world;
+            world = getWorld();
+            world.removeObject(worm);
         }
     }    
 }
