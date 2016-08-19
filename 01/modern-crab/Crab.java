@@ -39,8 +39,12 @@ public class Crab extends Actor
         if(worm != null)
         {
             World world;
+            int x, y;
+            x = Greenfoot.getRandomNumber(500);
+            y = Greenfoot.getRandomNumber(500);
             world = getWorld();
             world.removeObject(worm);
+            world.addObject(worm, x, y);
         }
     }
 }
