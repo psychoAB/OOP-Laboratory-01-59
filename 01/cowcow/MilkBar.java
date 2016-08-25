@@ -18,9 +18,9 @@ public class MilkBar extends Actor
     private final static int MaxBarWidth = 23;
     private final static int MaxBarHeight = 80;
     private static GreenfootImage milkBarImage = new GreenfootImage("milkBar.png");
+    private final int maxValue;
+    private final int minValue;
     private int barHeight;
-    private int maxValue;
-    private int minValue;
     private int value;
     private int yShift;
 

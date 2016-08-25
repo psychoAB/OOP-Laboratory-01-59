@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Fri Aug 26 03:30:55 ICT 2016
+#Fri Aug 26 05:04:57 ICT 2016
 readme.name=@README
 class.MilkBar.image=milkBar.png
 target2.name=MilkBar
@@ -36,7 +36,7 @@ editor.fx.0.height=700
 target1.showInterface=false
 target3.typeParameters=
 target1.name=Player
-editor.swing.0.width=681
+editor.swing.0.width=680
 editor.fx.0.width=700
 target4.height=50
 target3.name=Cow

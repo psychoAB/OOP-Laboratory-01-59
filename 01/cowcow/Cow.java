@@ -13,10 +13,10 @@ public class Cow extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
 
-    private final static int MaxMilk = 100;
+    private final static int MaxMilk = 300;
     private final static int MinMilk = 0;
     private final static int milkGenerateRate= 1;
-    private final static int milking = 4;
+    private final static int milking = 5;
     private MilkBar milkBar;
     private int currentMilk = 50;
 
