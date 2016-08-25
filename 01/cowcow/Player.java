@@ -16,7 +16,8 @@ public class Player extends Actor
      */
 
     private List<Cow> remainCows;
-    private boolean leftHand = null;
+    private boolean firstMilking = true;
+    private boolean leftHand = true;
 
     public void act() 
     {
@@ -94,22 +95,24 @@ public class Player extends Actor
         }
     }
 
-    private void getMilk(string arrow)
+    private void getMilk(String arrow)
     {
-        if(leftHand == null)
+        if(firstMilking)
         {
             if(arrow == "left")
             {
                 leftHand = false;
+                firstMilking = false;
             }
             else if(arrow == "right")
             {
                 leftHand = true;
+                firstMilking = false;
             }
         }
         else
         {
-            leftHand = !leftHand
+            leftHand = !leftHand;
         }
     }
 }

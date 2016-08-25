@@ -9,4 +9,6 @@ comment3.params=
 comment3.target=void\ moveUp()
 comment4.params=
 comment4.target=void\ moveDown()
-numComments=5
+comment5.params=arrow
+comment5.target=void\ getMilk(java.lang.String)
+numComments=6
