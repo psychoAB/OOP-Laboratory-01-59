@@ -16,14 +16,14 @@ public class Cow extends Actor
     private final static int MaxMilk = 100;
     private final static int MinMilk = 0;
     private final static int milkGenerateRate= 1;
-    private final static int milking = 3;
+    private final static int milking = 4;
+    private MilkBar milkBar;
     private int currentMilk = 50;
 
     public void act() 
     {
         // Add your action code here.
         generateMilk();
-        giveMilk();
     }
 
     public int giveMilk()
@@ -33,22 +33,27 @@ public class Cow extends Actor
         if(isMinMilk())
         {
             givenMilk = milking + currentMilk;
-            normalizeMilk();
         }
         else
         {
             givenMilk = milking;
         }
+        normalizeMilk();
+        milkBar.updateValue(currentMilk);
         return  givenMilk;
+    }
+
+    protected void addedToWorld(World world)
+    {
+        milkBar = new MilkBar(MaxMilk, MinMilk, currentMilk);
+        world.addObject(milkBar, this.getX() + 125, this.getY());
     }
 
     private void generateMilk()
     {
         currentMilk += milkGenerateRate;
-        if(isMaxMilk())
-        {
-            normalizeMilk();
-        }
+        normalizeMilk();
+        milkBar.updateValue(currentMilk);
     }
 
     private void normalizeMilk()
