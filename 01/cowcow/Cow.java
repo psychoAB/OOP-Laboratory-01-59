@@ -24,6 +24,7 @@ public class Cow extends Actor
     {
         // Add your action code here.
         generateMilk();
+        dead();
     }
 
     public int giveMilk()
@@ -56,6 +57,20 @@ public class Cow extends Actor
         milkBar.updateValue(currentMilk);
     }
 
+    private void dead()
+    {
+        if(isMaxMilk())
+        {
+            World world;
+            DeadCow deadCow;
+            world = getWorld();
+            deadCow = new DeadCow();
+            world.addObject(deadCow, this.getX(), this.getY());
+            world.removeObject(milkBar);
+            world.removeObject(this);
+        }
+    }
+
     private void normalizeMilk()
     {
         if(isMaxMilk())
@@ -70,11 +85,11 @@ public class Cow extends Actor
 
     private boolean isMaxMilk()
     {
-        return currentMilk > MaxMilk;
+        return currentMilk >= MaxMilk;
     }
 
     private boolean isMinMilk()
     {
-        return currentMilk < MinMilk;
+        return currentMilk <= MinMilk;
     }
 }
