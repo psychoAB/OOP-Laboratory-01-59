@@ -18,6 +18,8 @@ public class Player extends Actor
     private List<Cow> remainCows;
     private boolean firstMilking = true;
     private boolean leftHand = true;
+    private Cow currentCow;
+    private int milk = 0;
 
     public void act() 
     {
@@ -67,6 +69,7 @@ public class Player extends Actor
         }
         if(nearestUpCow!= null)
         {
+            currentCow = nearestUpCow;
             this.setLocation(nearestUpCow.getX(), nearestUpCow.getY());
         }
     }
@@ -91,11 +94,20 @@ public class Player extends Actor
         }
         if(nearestDownCow != null)
         {
+            currentCow = nearestDownCow;
             this.setLocation(nearestDownCow.getX(), nearestDownCow.getY());
         }
     }
 
     private void getMilk(String arrow)
+    {
+        int newMilk;
+        checkHand(arrow);
+        newMilk = currentCow.giveMilk();
+        milk += newMilk;
+    }
+
+    private void checkHand(String arrow)
     {
         if(firstMilking)
         {

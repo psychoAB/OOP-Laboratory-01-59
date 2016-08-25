@@ -11,4 +11,6 @@ comment4.params=
 comment4.target=void\ moveDown()
 comment5.params=arrow
 comment5.target=void\ getMilk(java.lang.String)
-numComments=6
+comment6.params=arrow
+comment6.target=void\ checkHand(java.lang.String)
+numComments=7
