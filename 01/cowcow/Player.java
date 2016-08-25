@@ -15,7 +15,8 @@ public class Player extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
 
-    List<Cow> remainCows;
+    private List<Cow> remainCows;
+    private boolean leftHand = null;
 
     public void act() 
     {
@@ -25,9 +26,17 @@ public class Player extends Actor
         {
             moveUp();
         }
-        if(Greenfoot.isKeyDown("down"))
+        else if(Greenfoot.isKeyDown("down"))
         {
             moveDown();
+        }
+        else if(Greenfoot.isKeyDown("left"))
+        {
+            getMilk("left");
+        }
+        else if(Greenfoot.isKeyDown("right"))
+        {
+            getMilk("right");
         }
     }
     
@@ -82,6 +91,25 @@ public class Player extends Actor
         if(nearestDownCow != null)
         {
             this.setLocation(nearestDownCow.getX(), nearestDownCow.getY());
+        }
+    }
+
+    private void getMilk(string arrow)
+    {
+        if(leftHand == null)
+        {
+            if(arrow == "left")
+            {
+                leftHand = false;
+            }
+            else if(arrow == "right")
+            {
+                leftHand = true;
+            }
+        }
+        else
+        {
+            leftHand = !leftHand
         }
     }
 }
