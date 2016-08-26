@@ -19,6 +19,7 @@ public class MyWorld extends World
         super(800, 600, 1); 
         worldInit();
     }
+
     private void worldInit()
     {
         Greenfoot.setSpeed(37);
