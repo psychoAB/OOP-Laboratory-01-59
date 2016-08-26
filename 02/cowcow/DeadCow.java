@@ -12,8 +12,29 @@ public class DeadCow extends Actor
      * Act - do whatever the deadCow wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() 
+    private GreenfootImage deadCow = new GreenfootImage("deadCow.png");
+    private GreenfootImage boom = new GreenfootImage("boom.png");
+    private int count = 0;
+
+    public void act()
     {
-        // Add your action code here.
-    }    
+        counter();
+    }
+
+    protected void addedToWorld(World world)
+    {
+        setImage(boom);
+    }
+
+    private void counter()
+    {
+        if(count <= 2)
+        {
+            count++;
+        }
+        else
+        {
+            setImage(deadCow);
+        }
+    }
 }
