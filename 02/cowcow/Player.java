@@ -42,7 +42,18 @@ public class Player extends Actor
             getMilk("right");
         }
     }
-    
+
+    public int milkTank()
+    {
+        return milk;
+    }
+
+    protected void addedToWorld(World world)
+    {
+        Score score = new Score();
+        world.addObject(score, 100, 40);
+    }
+
     private void getRemainCow()
     {
         World world = getWorld();
@@ -102,12 +113,14 @@ public class Player extends Actor
     private void getMilk(String arrow)
     {
         int newMilk;
-        checkHand(arrow);
-        newMilk = currentCow.giveMilk();
-        milk += newMilk;
+        if(checkHand(arrow))
+        {
+            newMilk = currentCow.giveMilk();
+            milk += newMilk;
+        }
     }
 
-    private void checkHand(String arrow)
+    private boolean checkHand(String arrow)
     {
         if(firstMilking)
         {
@@ -115,16 +128,24 @@ public class Player extends Actor
             {
                 leftHand = false;
                 firstMilking = false;
+                return true;
             }
             else if(arrow == "right")
             {
                 leftHand = true;
                 firstMilking = false;
+                return true;
             }
+            return false;
         }
         else
         {
-            leftHand = !leftHand;
+            if((arrow == "left" && leftHand) || (arrow == "right" && !leftHand))
+            {
+                leftHand = !leftHand;
+                return true;
+            }
+            return false;
         }
     }
 }
