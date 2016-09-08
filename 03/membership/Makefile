@@ -1,11 +1,12 @@
-UNIT_TEST=MembershipTest
+TESTER=MembershipTest
+TESTED=Membership
 
-TARGET_TESTER=MembershipTest.class
-TARGET_TESTED=Membership.class
+TARGET_TESTER=$(TESTER).class
+TARGET_TESTED=$(TESTED).class
 TARGET=$(TARGET_TESTER) $(TARGET_TESTED)
 
-BASE_TESTER=MembershipTest.java
-BASE_TESTED=Membership.java
+BASE_TESTER=$(TESTER).java
+BASE_TESTED=$(TESTED).java
 BASE=$(BASE_TESTER) $(BASE_TESTED)
 
 JAVA_FLAG=-cp .:/usr/share/java/*
@@ -17,7 +18,7 @@ clean:
 	-rm $(TARGET) 
 
 test: $(TARGET)
-	java $(JAVA_FLAG) $(JUNIT_RUNNER) $(UNIT_TEST)
+	java $(JAVA_FLAG) $(JUNIT_RUNNER) $(TESTER)
 
 $(TARGET_TESTER): $(BASE_TESTER)
 	javac $(JAVA_FLAG) $?
