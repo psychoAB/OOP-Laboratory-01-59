@@ -14,7 +14,7 @@ JUNIT_RUNNER=org.junit.runner.JUnitCore
 all: $(TARGET)
 
 clean:
-	rm $(TARGET) 
+	-rm $(TARGET) 
 
 test: $(TARGET)
 	java $(JAVA_FLAG) $(JUNIT_RUNNER) $(UNIT_TEST)
