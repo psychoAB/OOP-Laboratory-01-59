@@ -8,11 +8,18 @@ public class NumGuess {
         
         int solution = random.nextInt(100) + 1;
         int answer = 0;
+        int round = 0;
 
         do {
+            round += 1;
+            System.out.println("Round " + round);
             answer = scanner.nextInt();
             if (solution == answer) {
-                System.out.println("Correct.");
+                if (round < 5) {
+                    System.out.println("Correct, excellent.");
+                } else {
+                    System.out.println("Correct.");
+                }
             }
             else if (answer > solution) { 
                 System.out.println("Too high.");
