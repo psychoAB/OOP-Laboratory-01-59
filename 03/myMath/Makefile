@@ -18,7 +18,7 @@ clean:
 	-rm $(TARGET) 
 
 test: $(TARGET)
-	java $(JAVA_FLAG) $(JUNIT_RUNNER) $(UNIT_TEST)
+	java $(JAVA_FLAG) $(JUNIT_RUNNER) $(TESTER)
 
 $(TARGET_TESTER): $(BASE_TESTER)
 	javac $(JAVA_FLAG) $?
