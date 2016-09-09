@@ -8,4 +8,8 @@ public class Counter {
     public void increase() {
         currentCounter++;
     }
+
+    public void reset() {
+        currentCounter = 0;
+    }
 }
