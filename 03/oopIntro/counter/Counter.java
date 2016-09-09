@@ -1,10 +1,17 @@
 public class Counter {
     int initValue = 0;
     int currentCounter = 0;
+    int stepSize = 1;
 
     public Counter(int __initValue) {
         initValue = __initValue;
         currentCounter = __initValue;
+    }
+
+    public Counter(int __initValue, int __stepSize) {
+        initValue = __initValue;
+        currentCounter = __initValue;
+        stepSize = __stepSize;
     }
     
     public Counter() {
@@ -16,11 +23,11 @@ public class Counter {
     }
     
     public void increase() {
-        currentCounter++;
+        currentCounter += stepSize;
     }
 
     public void decrease() {
-        currentCounter--;
+        currentCounter -= stepSize;
     }
 
     public void reset() {
