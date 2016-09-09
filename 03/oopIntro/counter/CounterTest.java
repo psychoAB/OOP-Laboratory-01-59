@@ -33,4 +33,11 @@ public class CounterTest {
         counter.reset();
         assertEquals(0, counter.getValue());
     }
+    
+    @Test
+    public void testCounterShouldBeSetable() {
+        Counter counter = new Counter();
+        counter.setValue(10);
+        assertEquals(10, counter.getValue());
+    }
 }
