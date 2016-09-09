@@ -4,4 +4,8 @@ public class PlayerHealth {
     public int getHP() {
         return hp;
     }
+
+    public void setHP(int newHP) {
+        hp = newHP;
+    }
 }
