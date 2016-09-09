@@ -43,4 +43,11 @@ public class PlayerHealthTest {
         playerHP.setHP(0);
         assertFalse(playerHP.isAlive());
     }
+    
+    @Test
+    public void testIsAliveWhenHpNotZero() {
+        PlayerHealth playerHP = new PlayerHealth();
+        playerHP.setHP(89);
+        assertTrue(playerHP.isAlive());
+    }
 }
