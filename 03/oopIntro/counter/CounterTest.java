@@ -11,6 +11,12 @@ public class CounterTest {
     }
 
     @Test
+    public void testCounterShouldBeCreatedWithInitialValue() {
+        Counter counter = new Counter(7);
+        assertEquals(7, counter.getValue());
+    }
+
+    @Test
     public void testCounterShouldReturnZeroAfterCreated() {
         Counter counter = new Counter();
         assertEquals(0, counter.getValue());
@@ -23,6 +29,15 @@ public class CounterTest {
         assertEquals(1, counter.getValue());
         counter.increase();
         assertEquals(2, counter.getValue());
+    }
+
+    @Test
+    public void testCounterShouldDecrease() {
+        Counter counter = new Counter(7);
+        counter.decrease();
+        assertEquals(6, counter.getValue());
+        counter.decrease();
+        assertEquals(5, counter.getValue());
     }
 
     @Test
@@ -39,20 +54,5 @@ public class CounterTest {
         Counter counter = new Counter();
         counter.setValue(10);
         assertEquals(10, counter.getValue());
-    }
-
-    @Test
-    public void testCounterShouldBeCreatedWithInitialValue() {
-        Counter counter = new Counter(7);
-        assertEquals(7, counter.getValue());
-    }
-
-    @Test
-    public void testCounterShouldDecrease() {
-        Counter counter = new Counter(7);
-        counter.decrease();
-        assertEquals(6, counter.getValue());
-        counter.decrease();
-        assertEquals(5, counter.getValue());
     }
 }
