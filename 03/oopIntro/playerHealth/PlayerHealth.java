@@ -15,4 +15,8 @@ public class PlayerHealth {
         }
         return false;
     }
+    
+    public boolean isAlive() {
+        return !isDead();
+    }
 }
