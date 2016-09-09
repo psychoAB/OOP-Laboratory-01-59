@@ -22,4 +22,11 @@ public class PlayerHealthTest {
         playerHP.setHP(44);
         assertEquals(44, playerHP.getHP());
     }
+
+    @Test
+    public void testShouldDeadWhenHpZero() {
+        PlayerHealth playerHP = new PlayerHealth();
+        playerHP.setHP(0);
+        assertTrue(playerHP.isDead());
+    }
 }
