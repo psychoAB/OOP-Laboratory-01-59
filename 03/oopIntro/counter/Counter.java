@@ -12,4 +12,8 @@ public class Counter {
     public void reset() {
         currentCounter = 0;
     }
+    
+    public void setValue(int newValue) {
+        currentCounter = newValue;
+    }
 }
