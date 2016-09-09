@@ -1,5 +1,8 @@
+import java.util.Arrays;
+
 public class ArrayMax {
     public static int max(int[] ar) {
-            return ar[0];
+        Arrays.sort(ar);
+        return ar[ar.length - 1];
     }
 }
