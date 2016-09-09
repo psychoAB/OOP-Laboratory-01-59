@@ -9,4 +9,9 @@ public class PlayerHealthTest {
         PlayerHealth playerHP = new PlayerHealth();
         assertNotEquals(null, playerHP);
     }
+
+    public void testShouldGetHP() {
+        PlayerHealth playerHP = new PlayerHealth();
+        assertEquals(0, playerHP.getHP());
+    }
 }
