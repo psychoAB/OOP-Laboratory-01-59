@@ -1,7 +1,7 @@
 public class PlayerHealth {
     int hp = 0;
     
-    public void getHP() {
+    public int getHP() {
         return hp;
     }
 }
