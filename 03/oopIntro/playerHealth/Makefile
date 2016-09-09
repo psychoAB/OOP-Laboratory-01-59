@@ -22,6 +22,12 @@ clean:
 test: $(TARGET)
 	java $(JAVA_FLAG) $(JUNIT_RUNNER) $(TESTER)
 
+tester: $(BASE_TESTER)
+	javac $(JAVA_FLAG) $?
+	
+tested: $(BASE_TESTED)
+	javac $?
+
 $(TARGET_TESTER): $(BASE_TESTER)
 	javac $(JAVA_FLAG) $?
 
