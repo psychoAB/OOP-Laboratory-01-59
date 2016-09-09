@@ -29,4 +29,11 @@ public class PlayerHealthTest {
         playerHP.setHP(0);
         assertTrue(playerHP.isDead());
     }
+
+    @Test
+    public void testIsDeadWhenHpNotZero() {
+        PlayerHealth playerHP = new PlayerHealth();
+        playerHP.setHP(69);
+        assertFalse(playerHP.isDead());
+    }
 }
