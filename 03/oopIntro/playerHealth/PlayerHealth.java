@@ -8,4 +8,11 @@ public class PlayerHealth {
     public void setHP(int newHP) {
         hp = newHP;
     }
+
+    public boolean isDead() {
+        if(hp <= 0) {
+            return true;
+        }
+        return false;
+    }
 }
