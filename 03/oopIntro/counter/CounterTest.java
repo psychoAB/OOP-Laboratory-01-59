@@ -17,7 +17,7 @@ public class CounterTest {
     }
     
     @Test
-    public void testCounterShouldIncreaseByOne() {
+    public void testCounterShouldIncrease() {
         Counter counter = new Counter();
         counter.increase();
         assertEquals(1, counter.getValue());
@@ -45,5 +45,14 @@ public class CounterTest {
     public void testCounterShouldBeCreatedWithInitialValue() {
         Counter counter = new Counter(7);
         assertEquals(7, counter.getValue());
+    }
+
+    @Test
+    public void testCounterShouldDecrease() {
+        Counter counter = new Counter(7);
+        counter.decrease();
+        assertEquals(6, counter.getValue());
+        counter.decrease();
+        assertEquals(5, counter.getValue());
     }
 }
