@@ -50,6 +50,13 @@ public class CounterTest {
     }
     
     @Test
+    public void testCounterShouldResetToInit() {
+        Counter counter = new Counter(21);
+        counter.increase();
+        counter.resetToInit();
+        assertEquals(21, counter.getValue());
+    }
+    @Test
     public void testCounterShouldBeSetable() {
         Counter counter = new Counter();
         counter.setValue(10);
