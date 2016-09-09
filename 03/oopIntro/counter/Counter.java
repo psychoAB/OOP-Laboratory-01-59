@@ -1,5 +1,13 @@
 public class Counter {
     int currentCounter = 0;
+
+    public Counter(int initValue) {
+        currentCounter = initValue;
+    }
+    
+    public Counter() {
+        this(0);
+    }
     
     public int getValue() {
         return currentCounter;
