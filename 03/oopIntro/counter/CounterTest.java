@@ -24,4 +24,13 @@ public class CounterTest {
         counter.increase();
         assertEquals(2, counter.getValue());
     }
+
+    @Test
+    public void testCounterShouldReset() {
+        Counter counter = new Counter();
+        counter.increase();
+        counter.increase();
+        counter.reset();
+        assertEquals(0, counter.getValue());
+    }
 }
