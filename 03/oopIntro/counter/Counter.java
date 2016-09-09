@@ -1,8 +1,10 @@
 public class Counter {
+    int initValue = 0;
     int currentCounter = 0;
 
-    public Counter(int initValue) {
-        currentCounter = initValue;
+    public Counter(int __initValue) {
+        initValue = __initValue;
+        currentCounter = __initValue;
     }
     
     public Counter() {
@@ -23,6 +25,10 @@ public class Counter {
 
     public void reset() {
         currentCounter = 0;
+    }
+
+    public void resetToInit() {
+        currentCounter = initValue;
     }
     
     public void setValue(int newValue) {
