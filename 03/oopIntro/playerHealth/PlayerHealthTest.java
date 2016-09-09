@@ -11,8 +11,8 @@ public class PlayerHealthTest {
     }
 
     @Test
-    public void testShouldGetHP() {
+    public void testShouldReturnFullHPAfterCreated() {
         PlayerHealth playerHP = new PlayerHealth();
-        assertEquals(0, playerHP.getHP());
+        assertEquals(100, playerHP.getHP());
     }
 }
