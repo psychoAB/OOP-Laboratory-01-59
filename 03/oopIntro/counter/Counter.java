@@ -17,6 +17,10 @@ public class Counter {
         currentCounter++;
     }
 
+    public void decrease() {
+        currentCounter--;
+    }
+
     public void reset() {
         currentCounter = 0;
     }
