@@ -1,5 +1,5 @@
 public class PlayerHealth {
-    int hp = 0;
+    int hp = 100;
     
     public int getHP() {
         return hp;
