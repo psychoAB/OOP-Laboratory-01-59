@@ -24,7 +24,7 @@ public class PlayerHealthTest {
     }
 
     @Test
-    public void testShouldDeadWhenHpZero() {
+    public void testIsDeadWhenHpZero() {
         PlayerHealth playerHP = new PlayerHealth();
         playerHP.setHP(0);
         assertTrue(playerHP.isDead());
