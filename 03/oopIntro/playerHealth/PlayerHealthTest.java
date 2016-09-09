@@ -15,4 +15,11 @@ public class PlayerHealthTest {
         PlayerHealth playerHP = new PlayerHealth();
         assertEquals(100, playerHP.getHP());
     }
+
+    @Test
+    public void testHpShouldBeSetable() {
+        PlayerHealth playerHP = new PlayerHealth();
+        playerHP.setHP(44);
+        assertEquals(44, playerHP.getHP());
+    }
 }
