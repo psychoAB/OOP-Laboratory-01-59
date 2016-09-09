@@ -40,7 +40,7 @@ public class PlayerHealthTest {
     @Test
     public void testIsAliveWhenHpZero() {
         PlayerHealth playerHP = new PlayerHealth();
-        playerHP.setHP(89);
+        playerHP.setHP(0);
         assertFalse(playerHP.isAlive());
     }
 }
