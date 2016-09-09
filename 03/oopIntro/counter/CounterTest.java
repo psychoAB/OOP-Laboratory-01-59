@@ -40,4 +40,10 @@ public class CounterTest {
         counter.setValue(10);
         assertEquals(10, counter.getValue());
     }
+
+    @Test
+    public void testCounterShouldBeCreatedWithInitialValue() {
+        Counter counter = new Counter(7);
+        assertEquals(7, counter.getValue());
+    }
 }
