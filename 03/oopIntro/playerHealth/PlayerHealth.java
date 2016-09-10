@@ -28,4 +28,8 @@ public class PlayerHealth {
     public void wearArmor() {
         armor = true;
     }
+
+    public void removeArmor() {
+        armor = false;
+    }
 }
