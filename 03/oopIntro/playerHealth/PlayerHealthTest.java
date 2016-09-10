@@ -17,6 +17,12 @@ public class PlayerHealthTest {
     }
 
     @Test
+    public void testShouldReturnNoArmorWhenCreated() {
+        PlayerHealth playerHP = new PlayerHealth();
+        assertFalse(playerHP.isOnArmor());
+    }
+
+    @Test
     public void testHpShouldBeSetable() {
         PlayerHealth playerHP = new PlayerHealth();
         playerHP.setHP(44);
