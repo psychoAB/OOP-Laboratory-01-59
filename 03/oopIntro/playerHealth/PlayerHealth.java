@@ -24,4 +24,8 @@ public class PlayerHealth {
     public boolean isOnArmor() {
         return armor;
     }
+
+    public void wearArmor() {
+        armor = true;
+    }
 }
