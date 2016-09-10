@@ -32,4 +32,12 @@ public class PlayerHealth {
     public void removeArmor() {
         armor = false;
     }
+    
+    public void getHit() {
+        if(isOnArmor()) {
+            hp -= 3;
+        } else {
+            hp -= 10;
+        }
+    }
 }
