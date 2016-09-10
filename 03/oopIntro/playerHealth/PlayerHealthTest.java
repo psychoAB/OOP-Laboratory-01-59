@@ -56,4 +56,11 @@ public class PlayerHealthTest {
         playerHP.setHP(89);
         assertTrue(playerHP.isAlive());
     }
+
+    @Test
+    public void testShouldWearArmorable() {
+        PlayerHealth playerHP = new PlayerHealth();
+        playerHP.wearArmor();
+        assertTrue(playerHP.isOnArmor());
+    }
 }
