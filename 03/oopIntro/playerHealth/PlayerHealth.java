@@ -1,5 +1,6 @@
 public class PlayerHealth {
     int hp = 100;
+    boolean armor = false;
     
     public int getHP() {
         return hp;
@@ -18,5 +19,9 @@ public class PlayerHealth {
     
     public boolean isAlive() {
         return !isDead();
+    }
+
+    public boolean isOnArmor() {
+        return armor;
     }
 }
