@@ -72,4 +72,11 @@ public class PlayerHealthTest {
         playerHP.removeArmor();
         assertFalse(playerHP.isOnArmor());
     }
+
+    @Test
+    public void testGetHitWithoutArmor() {
+        PlayerHealth playerHP = new PlayerHealth();
+        playerHP.getHit();
+        assertEquals(90, playerHP.getHP());
+    }
 }
