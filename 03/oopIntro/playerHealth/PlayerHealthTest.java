@@ -63,4 +63,13 @@ public class PlayerHealthTest {
         playerHP.wearArmor();
         assertTrue(playerHP.isOnArmor());
     }
+
+    @Test
+    public void testShouldRemoveArmorable() {
+        PlayerHealth playerHP = new PlayerHealth();
+        playerHP.wearArmor();
+        assertTrue(playerHP.isOnArmor());
+        playerHP.removeArmor();
+        assertFalse(playerHP.isOnArmor());
+    }
 }
