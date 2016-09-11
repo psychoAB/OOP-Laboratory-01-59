@@ -40,4 +40,12 @@ public class PlayerHealth {
             hp -= 10;
         }
     }
+
+    public void checkHpRange() {
+        if (hp < 0) {
+            hp = 0;
+        } else if (hp > 100) {
+            hp = 100;
+        }
+    }
 }
