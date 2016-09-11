@@ -79,4 +79,11 @@ public class PlayerHealthTest {
         playerHP.getHit();
         assertEquals(90, playerHP.getHP());
     }
+
+    @Test
+    public void testGetHitWithArmor() {
+        PlayerHealth playerHP = new PlayerHealth();
+        playerHP.getHit();
+        assertEquals(97, playerHP.getHP());
+    }
 }
