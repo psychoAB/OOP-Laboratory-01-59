@@ -83,7 +83,7 @@ public class PlayerHealthTest {
     @Test
     public void testGetHitWithArmor() {
         PlayerHealth playerHP = new PlayerHealth();
-        playerHP.wearArmor()
+        playerHP.wearArmor();
         playerHP.getHit();
         assertEquals(97, playerHP.getHP());
     }
