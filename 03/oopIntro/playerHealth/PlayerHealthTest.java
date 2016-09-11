@@ -87,4 +87,13 @@ public class PlayerHealthTest {
         playerHP.getHit();
         assertEquals(97, playerHP.getHP());
     }
+
+    @Test
+    public void testWhenGetHitHpDontLowerThanZero() {
+        PlayerHealth playerHP = new PlayerHealth();
+        for(int round = 0; round < 11; round++) {
+            playerHP.getHit();
+        }
+        assertEquals(0, playerHP.getHP());
+    }
 }
