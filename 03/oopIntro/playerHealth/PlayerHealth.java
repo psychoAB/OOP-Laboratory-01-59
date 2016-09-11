@@ -8,6 +8,7 @@ public class PlayerHealth {
 
     public void setHP(int newHP) {
         hp = newHP;
+        checkHpRange();
     }
 
     public boolean isDead() {
@@ -39,6 +40,7 @@ public class PlayerHealth {
         } else {
             hp -= 10;
         }
+        checkHpRange();
     }
 
     public void checkHpRange() {
