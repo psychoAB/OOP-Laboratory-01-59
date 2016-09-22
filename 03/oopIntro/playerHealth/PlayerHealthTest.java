@@ -96,4 +96,12 @@ public class PlayerHealthTest {
         }
         assertEquals(0, playerHP.getHP());
     }
+
+    @Test
+    public void testShouldHeal() {
+        PlayerHealth playerHP = new PlayerHealth();
+        playerHP.setHP(21);
+        playerHP.heal();
+        assertEquals(26, playerHP.getHP());
+    }
 }
