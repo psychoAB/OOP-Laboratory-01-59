@@ -43,6 +43,11 @@ public class PlayerHealth {
         checkHpRange();
     }
 
+    public void heal() {
+        hp += 5;
+        checkHpRange();
+    }
+
     public void checkHpRange() {
         if (hp < 0) {
             hp = 0;
