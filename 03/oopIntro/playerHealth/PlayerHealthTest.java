@@ -104,4 +104,12 @@ public class PlayerHealthTest {
         playerHP.heal();
         assertEquals(26, playerHP.getHP());
     }
+    
+    @Test
+    public void testShouldSuperHeal() {
+        PlayerHealth playerHP = new PlayerHealth();
+        playerHP.setHP(48);
+        playerHP.superHeal();
+        assertEquals(55, playerHP.getHP());
+    }
 }
