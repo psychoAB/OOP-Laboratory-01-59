@@ -8,4 +8,9 @@ public class GameScreen extends ScreenAdapter {
     public GameScreen(Pacpac pacpac) {
         this.pacpac = pacpac;
     }
+
+    @Override
+    public void render(float delta) {
+        System.out.println("Hello " + delta);
+    }
 }
