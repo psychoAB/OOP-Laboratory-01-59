@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.Input.Keys;
 
 public class GameScreen extends ScreenAdapter {
     private Pacpac pacpac;
@@ -31,6 +32,11 @@ public class GameScreen extends ScreenAdapter {
     }
 
     private void update(float delta) {
-        x += 5;
+        if(Gdx.input.isKeyPressed(Keys.LEFT)) {
+            x -= 10;
+        }
+        if(Gdx.input.isKeyPressed(Keys.RIGHT)) {
+            x += 10;
+        }
     }
 }
