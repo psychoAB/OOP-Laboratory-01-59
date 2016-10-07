@@ -7,8 +7,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class Pacpac extends ApplicationAdapter {
-	SpriteBatch batch;
-	Texture img;
+	public SpriteBatch batch;
 	
 	@Override
 	public void create () {
@@ -17,8 +16,7 @@ public class Pacpac extends ApplicationAdapter {
 
 	@Override
 	public void render () {
-		batch.begin();
-		batch.end();
+            super.render();
 	}
 	
 	@Override
