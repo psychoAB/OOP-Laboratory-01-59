@@ -9,6 +9,14 @@ public class Pacman {
     public static final int DIRECTION_LEFT = 4;
     public static final int DIRECTION_STILL = 0;
 
+    private static final int [][] DIRECTION_OFFSETS = new int [][] {
+        {0, 0},
+        {0, -1},
+        {1, 0},
+        {0, 1},
+        {-1, 0}
+    };
+
     private Vector2 position;
 
     public Pacman(int x, int y) {
@@ -16,20 +24,8 @@ public class Pacman {
     }
 
     public void move(int direction) {
-        switch(direction) {
-            case DIRECTION_UP:
-                position.y -= 10;
-                break;
-            case DIRECTION_RIGHT:
-                position.x += 10;
-                break;
-            case DIRECTION_DOWN:
-                position.y += 10;
-                break;
-            case DIRECTION_LEFT:
-                position.x -= 10;
-                break;
-        }
+        position.x += 10 * DIRECTION_OFFSETS[direction][0];
+        position.y += 10 * DIRECTION_OFFSETS[direction][1];
     }
 
     public Vector2 getPosition() {
