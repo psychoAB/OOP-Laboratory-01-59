@@ -10,13 +10,15 @@ import com.badlogic.gdx.math.Vector2;
 
 public class GameScreen extends ScreenAdapter {
     private Pacpac pacpac;
+    private World world;
     private Pacman pacman;
     private Texture pacmanImg;
     
     public GameScreen(Pacpac pacpac) {
         this.pacpac = pacpac;
         pacmanImg = new Texture("pacman.png");
-        pacman = new Pacman(100, 100);
+        world = new World(pacpac);
+        pacman = world.getPacman();
     }
 
     @Override
