@@ -18,13 +18,13 @@ public class Pacman {
     public void move(int direction) {
         switch(direction) {
             case DIRECTION_UP:
-                position.y += 10;
+                position.y -= 10;
                 break;
             case DIRECTION_RIGHT:
                 position.x += 10;
                 break;
             case DIRECTION_DOWN:
-                position.y -= 10;
+                position.y += 10;
                 break;
             case DIRECTION_LEFT:
                 position.x -= 10;
