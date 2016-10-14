@@ -6,18 +6,17 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.Input.Keys;
+import com.badlogic.gdx.math.Vector2;
 
 public class GameScreen extends ScreenAdapter {
     private Pacpac pacpac;
+    private Pacman pacman;
     private Texture pacmanImg;
-    private int x;
-    private int y;
     
     public GameScreen(Pacpac pacpac) {
         this.pacpac = pacpac;
         pacmanImg = new Texture("pacman.png");
-        x = 100;
-        y = 100;
+        pacman = new Pacman(100, 100);
     }
 
     @Override
@@ -27,7 +26,8 @@ public class GameScreen extends ScreenAdapter {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         SpriteBatch batch = pacpac.batch;
         batch.begin();
-        batch.draw(pacmanImg, x, y);
+        Vector2 pacmanPosition = pacman.getPosition();
+        batch.draw(pacmanImg, pacmanPosition.x, pacmanPosition.y);
         batch.end();
     }
 
