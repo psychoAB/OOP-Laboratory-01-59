@@ -26,9 +26,13 @@ public class GameScreen extends ScreenAdapter {
     }
 
     private void update(float delta) {
-        Pacman pacman = world.getPacman();
-
         world.update(delta);
+
+        updatePacmanDirection();
+    }
+
+    private void updatePacmanDirection() {
+        Pacman pacman = world.getPacman();
 
         if(Gdx.input.isKeyPressed(Keys.UP)) {
             pacman.setNextDirection(pacman.DIRECTION_UP);
