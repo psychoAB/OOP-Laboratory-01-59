@@ -2,6 +2,7 @@ package com.mygdx.pacpac;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.Vector2;
 
 public class WorldRenderer {
@@ -13,6 +14,8 @@ public class WorldRenderer {
 
     private Texture pacmanImg;
 
+    private BitmapFont font;
+
     private MazeRenderer mazeRenderer;
 
     public WorldRenderer(Pacpac pacpac, World world) {
@@ -23,6 +26,7 @@ public class WorldRenderer {
         
         mazeRenderer = new MazeRenderer(batch, world.getMaze());
         pacmanImg = new Texture("pacman.png");
+        font = new BitmapFont();
     }
 
     public void render(float delta) {
@@ -33,6 +37,9 @@ public class WorldRenderer {
         batch.begin();
         Vector2 pacmanPosition = pacman.getPosition();
         batch.draw(pacmanImg, pacmanPosition.x - BLOCK_SIZE / 2, Pacpac.HEIGHT - pacmanPosition.y - BLOCK_SIZE / 2);
+
+        font.draw(batch, "" + world.getScore(), 700, 60);
+
         batch.end();
     }
 }
