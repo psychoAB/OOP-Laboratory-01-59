@@ -5,6 +5,8 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Vector2;
 
 public class WorldRenderer {
+    public static final int BLOCK_SIZE = 40;
+    
     private SpriteBatch batch;
     private Pacpac pacpac;
     private World world;
@@ -30,7 +32,7 @@ public class WorldRenderer {
 
         batch.begin();
         Vector2 pacmanPosition = pacman.getPosition();
-        batch.draw(pacmanImg, pacmanPosition.x - 20, pacmanPosition.y - 20);
+        batch.draw(pacmanImg, pacmanPosition.x - BLOCK_SIZE / 2, pacmanPosition.y - BLOCK_SIZE / 2);
         batch.end();
     }
 }
