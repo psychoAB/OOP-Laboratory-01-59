@@ -38,8 +38,12 @@ public class Maze {
         }
     }
 
-    public void removeDotAt(int r, int c) {
-        hasDots[r][c] = false;
+    public boolean removeDotAt(int r, int c) {
+        if(hasDots[r][c]) {
+            hasDots[r][c] = false;
+            return true;
+        }
+        return false;
     }
 
     public int getHeight() {

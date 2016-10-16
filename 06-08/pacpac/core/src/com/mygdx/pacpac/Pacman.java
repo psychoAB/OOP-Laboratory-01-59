@@ -24,15 +24,17 @@ public class Pacman {
     private int currentDirection;
     private int nextDirection;
 
-    Maze maze;
+    private World world;
+    private Maze maze;
 
-    public Pacman(int x, int y, Maze maze) {
-        this.maze = maze;
+    public Pacman(int x, int y, World world) {
+        this.world = world;
 
         position = new Vector2(x, y);
 
         currentDirection = DIRECTION_STILL;
         nextDirection = DIRECTION_STILL;
+        maze = world.getMaze();
     }
 
     public void update() {
@@ -42,7 +44,9 @@ public class Pacman {
             } else {
                 currentDirection = DIRECTION_STILL;
             }
-            maze.removeDotAt(getRow(), getColumn());
+            if(maze.removeDotAt(getRow(), getColumn())) {
+                world.increaseScore();
+            }
         }
 
         position.x += SPEED * DIRECTION_OFFSETS[currentDirection][0];

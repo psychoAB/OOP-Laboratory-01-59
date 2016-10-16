@@ -10,13 +10,17 @@ public class World {
         this.pacpac = pacpac;
 
         maze = new Maze();
-        pacman = new Pacman(60, 60, maze);
+        pacman = new Pacman(60, 60, this);
 
         score = 0;
     }
 
     public void update(float delta) {
         pacman.update();
+    }
+
+    public void increaseScore() {
+        score++;
     }
 
     Pacman getPacman() {
