@@ -30,7 +30,7 @@ public class WorldRenderer {
 
         batch.begin();
         Vector2 pacmanPosition = pacman.getPosition();
-        batch.draw(pacmanImg, pacmanPosition.x, pacmanPosition.y);
+        batch.draw(pacmanImg, pacmanPosition.x - 20, pacmanPosition.y - 20);
         batch.end();
     }
 }

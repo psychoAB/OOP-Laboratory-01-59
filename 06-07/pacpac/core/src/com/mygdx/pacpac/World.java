@@ -7,7 +7,7 @@ public class World {
 
     World(Pacpac pacpac) {
         this.pacpac = pacpac;
-        pacman = new Pacman(100, 100);
+        pacman = new Pacman(60, 60);
         maze = new Maze();
     }
 
