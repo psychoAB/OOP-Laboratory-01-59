@@ -1,6 +1,7 @@
 package com.mygdx.pacpac;
 
 import com.badlogic.gdx.math.Vector2;
+import java.util.LinkedList;
 
 public class Pacman {
     public static final int SPEED = 5;
@@ -26,10 +27,13 @@ public class Pacman {
 
     private World world;
 
+    private LinkedList<DotEattenListener> dotEattenListener;
+
     public Pacman(int x, int y, World world) {
         this.world = world;
 
         position = new Vector2(x, y);
+        dotEattenListener = new LinkedList<DotEattenListener>();
 
         currentDirection = DIRECTION_STILL;
         nextDirection = DIRECTION_STILL;
@@ -45,7 +49,7 @@ public class Pacman {
                 currentDirection = DIRECTION_STILL;
             }
             if(maze.removeDotAt(getRow(), getColumn())) {
-                world.increaseScore();
+                notifyDotEattenListeners();
             }
         }
 
@@ -83,5 +87,19 @@ public class Pacman {
 
     private int getColumn() {
         return ((int)position.x) / WorldRenderer.BLOCK_SIZE;
+    }
+
+    public interface DotEattenListener {
+        void notifyDotEatten();
+    }
+
+    public void registerDotEattenListener(DotEattenListener listener) {
+        dotEattenListener.add(listener);
+    }
+
+    private void notifyDotEattenListeners() {
+        for(DotEattenListener listener : dotEattenListener) {
+            listener.notifyDotEatten();
+        }
     }
 }
