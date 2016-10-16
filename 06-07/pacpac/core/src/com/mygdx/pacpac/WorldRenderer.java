@@ -32,7 +32,7 @@ public class WorldRenderer {
 
         batch.begin();
         Vector2 pacmanPosition = pacman.getPosition();
-        batch.draw(pacmanImg, pacmanPosition.x - BLOCK_SIZE / 2, pacmanPosition.y - BLOCK_SIZE / 2);
+        batch.draw(pacmanImg, pacmanPosition.x - BLOCK_SIZE / 2, Pacpac.HEIGHT - pacmanPosition.y - BLOCK_SIZE / 2);
         batch.end();
     }
 }
