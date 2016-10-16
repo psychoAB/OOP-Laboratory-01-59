@@ -25,7 +25,6 @@ public class Pacman {
     private int nextDirection;
 
     private World world;
-    private Maze maze;
 
     public Pacman(int x, int y, World world) {
         this.world = world;
@@ -34,10 +33,11 @@ public class Pacman {
 
         currentDirection = DIRECTION_STILL;
         nextDirection = DIRECTION_STILL;
-        maze = world.getMaze();
     }
 
     public void update() {
+        Maze maze = world.getMaze();
+
         if(isAtCenter()) {
             if(canMoveInDirection(nextDirection)) {
                 currentDirection = nextDirection;
@@ -61,6 +61,8 @@ public class Pacman {
     }
 
     private boolean canMoveInDirection(int direction) {
+        Maze maze = world.getMaze();
+
         int newRow = getRow() + DIRECTION_OFFSETS[nextDirection][1];
         int newColumn = getColumn() + DIRECTION_OFFSETS[nextDirection][0];
 
