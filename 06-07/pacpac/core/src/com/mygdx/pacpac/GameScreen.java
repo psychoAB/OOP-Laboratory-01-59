@@ -9,13 +9,11 @@ public class GameScreen extends ScreenAdapter {
     private Pacpac pacpac;
     private World world;
     private WorldRenderer worldRenderer;
-    private Pacman pacman;
     
     public GameScreen(Pacpac pacpac) {
         this.pacpac = pacpac;
         world = new World(pacpac);
         worldRenderer = new WorldRenderer(pacpac, world);
-        pacman = world.getPacman();
     }
 
     @Override public void render(float delta) {
@@ -28,17 +26,20 @@ public class GameScreen extends ScreenAdapter {
     }
 
     private void update(float delta) {
+        Pacman pacman = world.getPacman();
+
+        world.update(delta);
+
         if(Gdx.input.isKeyPressed(Keys.UP)) {
-            pacman.move(pacman.DIRECTION_UP);
-        }
-        if(Gdx.input.isKeyPressed(Keys.RIGHT)) {
-            pacman.move(pacman.DIRECTION_RIGHT);
-        }
-        if(Gdx.input.isKeyPressed(Keys.DOWN)) {
-            pacman.move(pacman.DIRECTION_DOWN);
-        }
-        if(Gdx.input.isKeyPressed(Keys.LEFT)) {
-            pacman.move(pacman.DIRECTION_LEFT);
+            pacman.setNextDirection(pacman.DIRECTION_UP);
+        } else if(Gdx.input.isKeyPressed(Keys.RIGHT)) {
+            pacman.setNextDirection(pacman.DIRECTION_RIGHT);
+        } else if(Gdx.input.isKeyPressed(Keys.DOWN)) {
+            pacman.setNextDirection(pacman.DIRECTION_DOWN);
+        } else if(Gdx.input.isKeyPressed(Keys.LEFT)) {
+            pacman.setNextDirection(pacman.DIRECTION_LEFT);
+        } else {
+            pacman.setNextDirection(pacman.DIRECTION_STILL);
         }
     }
 }

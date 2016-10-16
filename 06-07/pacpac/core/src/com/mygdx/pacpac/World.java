@@ -11,6 +11,10 @@ public class World {
         maze = new Maze();
     }
 
+    public void update(float delta) {
+        pacman.update();
+    }
+
     Pacman getPacman() {
         return pacman;
     }
