@@ -1,26 +1,21 @@
 package com.mygdx.pacpac;
 
 import com.badlogic.gdx.ScreenAdapter;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.Input.Keys;
-import com.badlogic.gdx.math.Vector2;
 
 public class GameScreen extends ScreenAdapter {
     private Pacpac pacpac;
     private World world;
     private WorldRenderer worldRenderer;
     private Pacman pacman;
-    private Texture pacmanImg;
     
     public GameScreen(Pacpac pacpac) {
         this.pacpac = pacpac;
         world = new World(pacpac);
         worldRenderer = new WorldRenderer(pacpac, world);
         pacman = world.getPacman();
-        pacmanImg = new Texture("pacman.png");
     }
 
     @Override public void render(float delta) {
