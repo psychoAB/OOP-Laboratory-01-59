@@ -10,6 +10,6 @@ My OOP-Laboratory course code (01204215 01/59)
 
 * __week03: java + [JUnit](www.junit.org)(unit testing) + intro to OOP__
 
-* __week04: git + sokuban [not even init directory]__
+* __week04: git + sokuban [not complete]__
 
 * __week06-09: pacman on [libgdx](https://libgdx.badlogicgames.com)__
