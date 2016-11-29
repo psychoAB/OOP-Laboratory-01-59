@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 f = open('courses.txt', 'r')
 s = f.read()
 f.close()
