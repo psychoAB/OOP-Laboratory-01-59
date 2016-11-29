@@ -13,3 +13,5 @@ My OOP-Laboratory course code (01204215 01/59)
 * __week04: git + sokuban [not complete]__
 
 * __week06-09: pacman on [libgdx](https://libgdx.badlogicgames.com)__
+
+* __week12: rushing Python course__
