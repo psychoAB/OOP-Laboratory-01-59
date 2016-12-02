@@ -1,3 +1,4 @@
 *.class
 *.txt
 *.swp
+__pycache__/
