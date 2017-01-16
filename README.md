@@ -15,3 +15,5 @@ My OOP-Laboratory course code (01204215 01/59)
 * __week06-09: pacman on [libgdx](https://libgdx.badlogicgames.com)__
 
 * __week12: rushing Python course__
+
+* __week13: learn how to use [Arcade libary] (https://pythonhosted.org/arcade/) [not complete]__
