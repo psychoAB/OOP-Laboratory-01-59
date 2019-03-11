@@ -4,16 +4,16 @@ My OOP-Laboratory course code (01204215 01/59)
 
 ### Timeline
 
-* __week01: learn how to use [Greenfoot](https://greenfoot.org)__
+* week01: learn how to use [Greenfoot](https://greenfoot.org)__
 
-* __week02: Greenfoot project [not complete]__
+* week02: Greenfoot project __[not complete]__
 
-* __week03: java + [JUnit](https://www.junit.org)(unit testing) + intro to OOP__
+* week03: java + [JUnit](https://www.junit.org)(unit testing) + intro to OOP
 
-* __week04: git + sokuban [not complete]__
+* week04: git + sokuban __[not complete]__
 
-* __week06-09: pacman on [libgdx](https://libgdx.badlogicgames.com)__
+* week06-09: pacman on [libgdx](https://libgdx.badlogicgames.com)
 
-* __week12: rushing Python course__
+* week12: rushing Python course
 
-* __week13: learn how to use [Arcade library](https://pypi.org/project/arcade) [not complete]__
+* week13: learn how to use [Arcade library](https://pypi.org/project/arcade) __[not complete]__
