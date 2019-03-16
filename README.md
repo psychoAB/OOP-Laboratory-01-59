@@ -1,9 +1,11 @@
 # OOP-Laboratory-01-59
 
+##### Description:
 ###### My OOP-Laboratory course code (01204215 01/59)
 
-### Timeline
+___
 
+### Timeline
 * week01: learn how to use [Greenfoot](https://greenfoot.org)
 
 * week02: Greenfoot project _[not complete]_
@@ -16,4 +18,4 @@
 
 * week12: rushing Python course
 
-* week13: learn how to use [Arcade library](https://pypi.org/project/arcade) _[not complete]_
+* week13: learn how to use [Arcade](https://pypi.org/project/arcade) _[not complete]_
